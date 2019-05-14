@@ -1,0 +1,8 @@
+#include "Vertex.h"
+
+const DWORD Particle::FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
+const DWORD Vertex::FVF = D3DFVF_XYZ;
+const DWORD CVertex::FVF = D3DFVF_XYZ | D3DFVF_DIFFUSE;
+const DWORD LVertex::FVF = D3DFVF_XYZ | D3DFVF_NORMAL;
+const DWORD TVertex::FVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_TEX1;
+const DWORD TerrainVertex::FVF = D3DFVF_XYZ | D3DFVF_TEX1;

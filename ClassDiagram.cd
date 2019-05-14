@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Object" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAABbCAAAAgAAAAAAAAGAJACAAAIABAAwAAAgA=</HashCode>
+      <FileName>Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object2D" Collapsed="true">
+    <Position X="4.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAgBAAAAAAAAEAABAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Object2D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object3D" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAIgAAAAAAAAAAAABAAAAAgAACAACAAAA=</HashCode>
+      <FileName>Object3D.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBuffer" Collapsed="true">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAgJAAAAoAABBAABAAAAIJAAgAAAAAAg=</HashCode>
+      <FileName>ObjectBuffer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectFactory" Collapsed="true">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAEAAAA=</HashCode>
+      <FileName>ObjectFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectStencil" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAgAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectStencil.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

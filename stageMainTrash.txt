@@ -1,0 +1,118 @@
+
+
+	//mDevice->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+	
+	// setting camera 
+	D3DXVECTOR3 pos = D3DXVECTOR3{20,20,-20 };
+	mCamera = new Camera(mDevice);
+	mCamera->Init(&pos,&D3DXVECTOR3{0,0,0});
+	mObjectManager.Add(mCamera);
+	
+	
+	PlayerG* player = new PlayerG(50,50);
+	CTexture* pTex = nullptr;
+	mRenderer->Load2DTexture("media/mario.png", &pTex);
+	player->Init(pTex);
+	mObjectManager.AddObject2D(player, layer::Player);
+
+
+	Ground* gr = new Ground(100,10);
+	gr->Move(400, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	gr = new Ground(100, 10);
+	gr->Move(300, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);	gr = new Ground(100, 10);
+	gr->Move(200, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	gr = new Ground(100, 10);
+	gr->Move(500, 500);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+
+	gr = new Ground(100, 10);
+	gr->Move(500, 400);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+
+	gr = new Ground(100, 10);
+	gr->Move(500, 300);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	
+	
+	///////////////////////////////////////////////////
+	///// 2d object call example //////////////////////
+	///////////////////////////////////////////////////
+
+	Player* player = new Player;
+	CTexture * pTex = nullptr;
+	mRenderer->Load2DTexture("media/Player.png", &pTex);
+	player->Init(pTex);
+	mObjectManager.AddObject2D(player, layer::Player);
+	
+	
+	/////////////////////////////////////////
+	///////////// 3D ////////////////////////
+	/////////////////////////////////////////
+
+	ObjectFactory* objectFactory = new ObjectFactory(mDevice);
+	
+	
+	Object3D* p3 = new Object3D();
+	C3DModel ccccccccccccccc
+	p3->Init();
+	mRenderer->LoadXObjects("media/Person.X",p3);
+	mObjectManager.Add(p3);
+	
+	
+	p3->Move(-2, 0, 2);
+	p3->SetScale(D3DXVECTOR3(0.1f, 0.1f, 0.1f));
+	mObjectManager.Add(p3);
+	
+
+	
+	// chapter2 - D3DX*Create
+
+
+	Part2::useD3DXCreate(mDevice,mObjectManager);
+	
+	// chapter3 - buffer
+	Part2::useBuffer(mDevice, mObjectManager,objectFactory);
+	
+	// chapter4 - coloring
+	Part2::useVertexColor(mDevice, mObjectManager, objectFactory);
+	//chapter5 - lighting
+	Part2::useVertexLight(mDevice, mObjectManager, objectFactory);
+	
+	//chapter6 - texturing
+	Part2::useVertexTexture(mDevice, mObjectManager, objectFactory);
+	
+	//chapter7- blending
+	Part2::useBlending(mDevice, mObjectManager, objectFactory);
+	ObjectFactory* objectFactory = new ObjectFactory(mDevice);
+
+	Part2::useStencil(mDevice, mObjectManager, objectFactory);
+
+	delete objectFactory;
+	
+
+	
+	Part3::useID3DXFont(mDevice, mSprite, mObjectManager, objectFactory);
+
+	Part3::useID3DXBaseMesh(mDevice,mObjectManager,objectFactory);
+	Part3::useXFile(mDevice, mObjectManager, mRenderer);
+
+	Part3::useBoundingVolume(mDevice, mObjectManager,mRenderer);
+
+
+	//SAFE_DELETE(objectFactory);
+	Part3::useID3DXBaseMesh(mDevice, mObjectManager, objectFactory);
