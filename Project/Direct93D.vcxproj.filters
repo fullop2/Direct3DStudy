@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork">
+      <UniqueIdentifier>{d0e69e95-28c7-472f-a42a-85c5e9da5d92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork">
+      <UniqueIdentifier>{fd2e8285-5231-48a1-8ec1-a3277b324eeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\Manager">
+      <UniqueIdentifier>{71f9cdc8-5cd9-47f8-ac99-5d8d35344e5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\Manager">
+      <UniqueIdentifier>{13d00e30-11d3-46c2-920b-58ff073f18af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\GameObjects.Framework">
+      <UniqueIdentifier>{e49f4827-bd32-482a-ad78-cd4685f366f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\GameObjects.Framework">
+      <UniqueIdentifier>{52c78b53-fa1b-4dc1-bd72-1e4c241f7ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\GameObjects.Framework\FundmentalObject">
+      <UniqueIdentifier>{f14417c0-68ca-459b-9406-82873b3bfd5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject">
+      <UniqueIdentifier>{1f400358-8639-454d-bd8b-8f99a8c14602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\GameBuilder">
+      <UniqueIdentifier>{a8144b2f-6691-412a-bf9f-d489b3b309f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\GameBuilder">
+      <UniqueIdentifier>{89311898-b297-42a1-a69b-b64871137b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\GameObject">
+      <UniqueIdentifier>{2946470f-1b3c-4298-8cd5-5524770e11ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\GameOject">
+      <UniqueIdentifier>{2143274d-e86c-403c-a725-e5f8bf221f93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene">
+      <UniqueIdentifier>{632c2513-97fa-4592-8196-b7d128e70267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Scene">
+      <UniqueIdentifier>{e639537e-ce57-4178-b592-e76ecc72c4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Study">
+      <UniqueIdentifier>{462d1ef6-1446-4596-b86f-4274b301cbce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Study">
+      <UniqueIdentifier>{8a6aeeaf-6972-4681-a60b-ec549a48818a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\GameObjects.Framework\Object">
+      <UniqueIdentifier>{52638ceb-c1d1-498c-b6eb-a5aedcc300c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\GameObjects.Framework\Object">
+      <UniqueIdentifier>{49318ee1-93fb-44e1-82d9-bd46450c6f8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\Resources">
+      <UniqueIdentifier>{a991d3b6-8bbf-4c8d-9aa2-c8501144930b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\Resources">
+      <UniqueIdentifier>{f9dd209d-b6d0-4c7d-aaf4-2433f7cc3fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Trash">
+      <UniqueIdentifier>{a2ad1965-85e4-43b9-8d8b-0738b680a46d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Trash">
+      <UniqueIdentifier>{dafcc871-e496-4e5c-b521-affdb04f8175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\GameObjects.Framework\Interface">
+      <UniqueIdentifier>{832cd9a0-e616-4873-a811-76bb0bd68dd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\Physics">
+      <UniqueIdentifier>{4e75cc92-19ed-43f6-b728-73a062e602ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\Physics">
+      <UniqueIdentifier>{41e2a6c9-4f55-47e4-99c8-3ffee322ced5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MeshLoaderOBJ">
+      <UniqueIdentifier>{94bf2694-02d5-4b0c-a002-86ea3cbaac99}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Light.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage_Main.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="StudyPart2.1.cpp">
+      <Filter>소스 파일\Study</Filter>
+    </ClCompile>
+    <ClCompile Include="StudyPart2.2.cpp">
+      <Filter>소스 파일\Study</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object2D.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object3D.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBuffer.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectStencil.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MirrorStencil.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="StudyPart3.1.cpp">
+      <Filter>소스 파일\Study</Filter>
+    </ClCompile>
+    <ClCompile Include="CText.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CTexture.cpp">
+      <Filter>소스 파일\FrameWork\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex.cpp">
+      <Filter>소스 파일\FrameWork\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="C3DModel.cpp">
+      <Filter>소스 파일\FrameWork\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="StudyPart3.2.cpp">
+      <Filter>소스 파일\Study</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidBody.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>소스 파일\FrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Gravity2D.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CBound.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>소스 파일\FrameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics2D.cpp">
+      <Filter>소스 파일\FrameWork\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerG.cpp">
+      <Filter>소스 파일\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody2D.cpp">
+      <Filter>소스 파일\FrameWork\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="FlexCamera.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshLoader.cpp">
+      <Filter>MeshLoaderOBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="CTerrain.cpp">
+      <Filter>소스 파일\FrameWork\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="StudyPart3.3.cpp">
+      <Filter>소스 파일\Study</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Light.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일\GameOject</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage_Main.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="StudyPart2.h">
+      <Filter>헤더 파일\Study</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object2D.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object3D.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBuffer.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectStencil.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MirrorStencil.h">
+      <Filter>헤더 파일\GameOject</Filter>
+    </ClInclude>
+    <ClInclude Include="StudyPart3.h">
+      <Filter>헤더 파일\Study</Filter>
+    </ClInclude>
+    <ClInclude Include="CText.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="C3DModel.h">
+      <Filter>헤더 파일\FrameWork\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>헤더 파일\FrameWork\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="CTexture.h">
+      <Filter>헤더 파일\FrameWork\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Gravity2D.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>헤더 파일\FrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="CBound.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="IDrawable.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplatedObjectManager.h">
+      <Filter>헤더 파일\FrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>헤더 파일\FrameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics2D.h">
+      <Filter>헤더 파일\FrameWork\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider2D.h">
+      <Filter>헤더 파일\FrameWork\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerG.h">
+      <Filter>헤더 파일\GameOject</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
+      <Filter>헤더 파일\GameOject</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderRect.h">
+      <Filter>헤더 파일\FrameWork\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody2D.h">
+      <Filter>헤더 파일\FrameWork\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderCircle.h">
+      <Filter>헤더 파일\FrameWork\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="FlexCamera.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrain.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJ-Loader-master\OBJ-Loader-master\Source\OBJ_Loader.h">
+      <Filter>MeshLoaderOBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshLoader.h">
+      <Filter>MeshLoaderOBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
+      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadME.txt" />
+    <Text Include="stageMainTrash.txt">
+      <Filter>헤더 파일\Trash</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Direct93D.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

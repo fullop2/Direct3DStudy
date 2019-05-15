@@ -1,0 +1,90 @@
+	
+	//mDevice->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
+	/*
+	// setting camera 
+	D3DXVECTOR3 pos = D3DXVECTOR3{20,20,-20 };
+	mCamera = new Camera(mDevice);
+	mCamera->Init(&pos,&D3DXVECTOR3{0,0,0});
+	mObjectManager.Add(mCamera);
+	*/
+	
+	/*
+	///////////////////////////////////////////////////
+	///// 2d object call example //////////////////////
+	///////////////////////////////////////////////////
+
+	Player* player = new Player;
+	CTexture * pTex = nullptr;
+	mRenderer->Load2DTexture("media/Player.png", &pTex);
+	player->Init(pTex);
+	mObjectManager.AddObject2D(player, layer::Player);
+	*/
+	
+	PlayerG* player = new PlayerG(50,50);
+	CTexture* pTex = nullptr;
+	mRenderer->Load2DTexture("media/mario.png", &pTex);
+	player->Init(pTex);
+	mObjectManager.AddObject2D(player, layer::Player);
+
+
+	Ground* gr = new Ground(100,10);
+	gr->Move(400, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	gr = new Ground(100, 10);
+	gr->Move(300, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);	gr = new Ground(100, 10);
+	gr->Move(200, 600);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	gr = new Ground(100, 10);
+	gr->Move(500, 500);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+
+	gr = new Ground(100, 10);
+	gr->Move(500, 400);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+
+	gr = new Ground(100, 10);
+	gr->Move(500, 300);
+	mRenderer->Load2DTexture("media/checker.jpg", &pTex);
+	gr->Init(pTex);
+	mObjectManager.AddObject2D(gr, layer::Monster);
+	
+
+
+	// chapter3 - buffer
+	// useBuffer(mDevice, mObjectManager,objectFactory);
+	/*
+	// chapter4 - coloring
+	useVertexColor(mDevice, mObjectManager);
+	//chapter5 - lighting
+	useVertexLight(mDevice, mObjectManager);
+	
+	//chapter6 - texturing
+	//useVertexTexture(mDevice, mObjectManager);
+	
+	//chapter7- blending
+	//useBlending(mDevice, mObjectManager);
+	ObjectFactory* objectFactory = new ObjectFactory(mDevice);
+
+	useStencil(mDevice, mObjectManager, objectFactory);
+
+	delete objectFactory;
+	*/
+
+	
+	//Part3::useID3DXFont(mDevice, mSprite, mObjectManager, objectFactory);
+
+	//Part3::useID3DXBaseMesh(mDevice,mObjectManager,objectFactory);
+	//Part3::useXFile(mDevice, mObjectManager, mRenderer);
+
+	//Part3::useBoundingVolume(mDevice, mObjectManager,mRenderer);
