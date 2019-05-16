@@ -222,9 +222,6 @@
     <ClCompile Include="Firework.cpp">
       <Filter>소스 파일\FrameWork\ParticleSystems</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectFactory.cpp">
-      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Light.h">
@@ -352,9 +349,6 @@
     </ClInclude>
     <ClInclude Include="CTerrain.h">
       <Filter>헤더 파일\FrameWork\Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectFactory.h">
-      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

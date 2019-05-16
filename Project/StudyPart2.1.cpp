@@ -31,7 +31,7 @@ void Part2::useD3DXCreate(LPDIRECT3DDEVICE9& device,ObjectManager& objectManager
 }
 
 // using buffer to make 3d object
-void Part2::useBuffer(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager, ObjectFactory* bufferFactory)
+void Part2::useBuffer(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager)
 {
 	LPDIRECT3DINDEXBUFFER9 ib = nullptr;
 	LPDIRECT3DVERTEXBUFFER9 vb = nullptr;
@@ -96,15 +96,14 @@ void Part2::useBuffer(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager, O
 	indices[33] = 4; indices[34] = 3; indices[35] = 7;
 
 	ib->Unlock();
-
-	ObjectBuffer * go = bufferFactory->CreateVertex(vb, ib, Vertex::FVF, sizeof(Vertex));
+	ObjectBuffer * go = new ObjectBuffer(vb, ib, Vertex::FVF, sizeof(Vertex),&D3DMATERIAL9(WHITE_MTRL),nullptr);
 	go->Move(3, 3, 0);
 
 	objectManager.Add(go);
 }
 
 // use vertex color
-void Part2::useVertexColor(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager, ObjectFactory* bufferFactory)
+void Part2::useVertexColor(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager)
 {
 	LPDIRECT3DINDEXBUFFER9 ib = nullptr;
 	LPDIRECT3DVERTEXBUFFER9 vb = nullptr;
@@ -124,19 +123,11 @@ void Part2::useVertexColor(LPDIRECT3DDEVICE9& device, ObjectManager& objectManag
 	cvertices[2] = CVertex{ -1.0f,-0.0f,0.0f,D3DCOLOR_XRGB(0,0,255) };
 	vb->Unlock();
 
-	ObjectBuffer* cobj = bufferFactory->CreateVertex(vb, nullptr, CVertex::FVF,sizeof(CVertex));
-	//cobj->SetScale(D3DXVECTOR3{ 5,5,5 });
+	ObjectBuffer* cobj = new ObjectBuffer(vb, nullptr, CVertex::FVF,sizeof(CVertex),&D3DMATERIAL9(WHITE_MTRL),nullptr);
 	objectManager.Add(cobj);
-
-	ID3DXMesh* mesh;
-	Vertex* v = nullptr;
-//	mesh->LockVertexBuffer(0, (void**)&v);
-	
-
-
 }
 
-void Part2::useVertexLight(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager, ObjectFactory* bufferFactory)
+void Part2::useVertexLight(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager)
 {
 	LPDIRECT3DVERTEXBUFFER9 vb = nullptr;
 
@@ -182,13 +173,13 @@ void Part2::useVertexLight(LPDIRECT3DDEVICE9& device, ObjectManager& objectManag
 	material->Power = 5.0f;
 
 
-	ObjectBuffer * obj = bufferFactory->CreateVertex(vb, nullptr, LVertex::FVF, sizeof(LVertex), material);
+	ObjectBuffer * obj = new ObjectBuffer(vb, nullptr, LVertex::FVF, sizeof(LVertex), material, nullptr);
 
 	obj->SetScale(D3DXVECTOR3(2, 2, 2));
 	objectManager.Add(obj);
 }
 
-void Part2::useVertexTexture(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager, ObjectFactory* bufferFactory)
+void Part2::useVertexTexture(LPDIRECT3DDEVICE9& device, ObjectManager& objectManager)
 {
 	//
 	// 텍스터링 과정
@@ -295,7 +286,7 @@ void Part2::useVertexTexture(LPDIRECT3DDEVICE9& device, ObjectManager& objectMan
 	material->Specular = WHITE;
 	material->Emissive = BLACK;
 	material->Power = 5.0f;
-	ObjectBuffer * obj = bufferFactory->CreateVertex(vb, ib, TVertex::FVF, sizeof(TVertex), material, texture);
+	ObjectBuffer * obj = new ObjectBuffer(vb, ib, TVertex::FVF, sizeof(TVertex), material, texture);
 	obj->Move(3, 0, 0);
 	//obj->SetScale(D3DXVECTOR3(1, 1, 5));
 	objectManager.Add(obj);

@@ -12,25 +12,22 @@ class ObjectBuffer : public Object3D
 	friend ObjectManager;
 
 public:	
-	ObjectBuffer();
-	ObjectBuffer(const ObjectBuffer&);
+	ObjectBuffer(LPDIRECT3DVERTEXBUFFER9 vertexBuffer,
+		LPDIRECT3DINDEXBUFFER9 indexBuffer,
+		DWORD FVF, int vertexSize, D3DMATERIAL9 * material, LPDIRECT3DTEXTURE9 texture);
+	ObjectBuffer::ObjectBuffer(LPD3DXMESH mesh, D3DMATERIAL9* mtrl, LPDIRECT3DTEXTURE9 texture);
 	virtual int Destroy() override;
 	virtual void Draw(LPDIRECT3DDEVICE9& device);
 	virtual int Update() override;
 	virtual ~ObjectBuffer();
 
 protected:
-
-
-	ObjectBuffer& operator=(const ObjectBuffer&){}
-	
-
 	LPD3DXMESH mMesh;
 	IDirect3DVertexBuffer9* mVertexBuffer;
 	IDirect3DIndexBuffer9* mIndexBuffer;
 	IDirect3DTexture9* mTexture;
 	DWORD FVF;
-	D3DMATERIAL9 * mMaterial;
+	D3DMATERIAL9 mMaterial;
 	int mVertexBufferSize;
 	int mIndexBufferSize;
 	int mVertexSize;

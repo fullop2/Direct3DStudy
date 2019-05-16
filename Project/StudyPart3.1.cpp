@@ -6,12 +6,11 @@
 #include "C3DModel.h"
 #include "ObjectManager.h"
 #include "Object3D.h"
-#include "ObjectFactory.h"
 #include "Renderer.h"
 
 
 
-void Part3::useID3DXFont(LPDIRECT3DDEVICE9 device,LPD3DXSPRITE sprite, ObjectManager& ObjectManager, ObjectFactory* objectFactory)
+void Part3::useID3DXFont(LPDIRECT3DDEVICE9 device,LPD3DXSPRITE sprite, ObjectManager& ObjectManager)
 {
 	//////////////////////////////////////////////////////////////////
 	////// old type //////////////////////////////////////////////////
@@ -78,7 +77,7 @@ void Part3::useID3DXFont(LPDIRECT3DDEVICE9 device,LPD3DXSPRITE sprite, ObjectMan
 	txtMtrl->Emissive = BLACK;
 	txtMtrl->Power = 1.0f;
 
-	ObjectBuffer * txt = objectFactory->CreateMesh(txtMesh,txtMtrl);
+	ObjectBuffer * txt = new ObjectBuffer(txtMesh,txtMtrl,nullptr);
 	ObjectManager.Add(txt);
 	txt->Move(10, 15,-10);
 
@@ -95,7 +94,7 @@ void dumpAttributeTable(std::ofstream& outFile, LPD3DXMESH mesh);
 void dumpAttributeBuffer(std::ofstream& outFile, LPD3DXMESH mesh);
 void dumpAdjacencyBuffer(std::ofstream& outFile, LPD3DXMESH mesh);
 
-void Part3::useID3DXBaseMesh(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectManager, ObjectFactory* objectFactory)
+void Part3::useID3DXBaseMesh(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectManager)
 {
 	// 0. 메쉬 생성
 	LPD3DXMESH mesh = nullptr;

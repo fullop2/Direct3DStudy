@@ -5,15 +5,14 @@
 #include "stdafx.h"
 
 class ObjectManager;
-class ObjectFactory;
 class Renderer;
 class CTerrain;
 
 namespace Part3
 {
-	void useID3DXFont(LPDIRECT3DDEVICE9 device, LPD3DXSPRITE sprite, ObjectManager& ObjectManager, ObjectFactory* objectFactory);
+	void useID3DXFont(LPDIRECT3DDEVICE9 device, LPD3DXSPRITE sprite, ObjectManager& ObjectManager);
 
-	void useID3DXBaseMesh(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectManager, ObjectFactory* objectFactory);
+	void useID3DXBaseMesh(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectManager);
 
 	void useXFile(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectManager,Renderer * renderer);
 

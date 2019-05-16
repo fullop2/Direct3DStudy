@@ -29,7 +29,6 @@
     <ClCompile Include="MeshLoader.cpp" />
     <ClCompile Include="MirrorStencil.cpp" />
     <ClCompile Include="ObjectBuffer.cpp" />
-    <ClCompile Include="ObjectFactory.cpp" />
     <ClCompile Include="ObjectStencil.cpp" />
     <ClCompile Include="ParticleSystem.cpp" />
     <ClCompile Include="Physics2D.cpp" />
@@ -78,7 +77,6 @@
     <ClInclude Include="MirrorStencil.h" />
     <ClInclude Include="OBJ-Loader-master\OBJ-Loader-master\Source\OBJ_Loader.h" />
     <ClInclude Include="ObjectBuffer.h" />
-    <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="Rigidbody2D.h" />
     <ClInclude Include="Snow.h" />
@@ -142,7 +140,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">

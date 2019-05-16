@@ -3,7 +3,7 @@
 #include "FlexCamera.h"
 #include "Light.h"
 #include "ObjectManager.h"
-#include "ObjectFactory.h"
+
 #include "Firework.h"
 #include "Snow.h"
 #include "CBound.h"
@@ -36,8 +36,8 @@ bool Stage_Main::Init()
 
 	CBoundingBox c = CBoundingBox(D3DXVECTOR3(-100, -100, -100), D3DXVECTOR3(100, 100, 100));
 	D3DXVECTOR3 o = D3DXVECTOR3(0, 200, 0);
-	ParticleSystem* ps =  new Snow(&c,5000);
-	ps->init(mDevice, "./media/w3.png");
+	ParticleSystem* ps =  new Snow(&c,20000);
+	ps->init(mDevice, "./Resource/snowflake.dds");
 	mParticleSystem.push_back(ps);
 
 	Light* light = new Light;
@@ -56,10 +56,8 @@ bool Stage_Main::Init()
 	
 	mCamera = new FlexCamera{mDevice};
 
-	ObjectFactory *objectFactory = new ObjectFactory(mDevice);
 	Part3::useTerrain(mDevice, mObjectManager,&mTerrain);
 	//Part3::useID3DXBaseMesh(mDevice, mObjectManager, objectFactory);
 	
-	delete objectFactory;
 	return true;
 }

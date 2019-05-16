@@ -5,27 +5,9 @@
 MirrorStencil::MirrorStencil(LPDIRECT3DVERTEXBUFFER9 vertexBuffer,
 	LPDIRECT3DINDEXBUFFER9 indexBuffer,
 	DWORD FVF, int vertexSize, D3DMATERIAL9 * material, LPDIRECT3DTEXTURE9 texture)
+	:ObjectStencil(vertexBuffer, indexBuffer, FVF, vertexSize, material, texture)
 {
-	mMesh = nullptr;
-	mVertexBuffer = vertexBuffer;
-	mIndexBuffer = indexBuffer;
-	FVF = FVF;
-	mVertexSize = vertexSize;
-	mMaterial = material;
-	mTexture = texture;
 
-	if (vertexBuffer)
-	{
-		D3DVERTEXBUFFER_DESC vdesc;
-		vertexBuffer->GetDesc(&vdesc);
-		mVertexBufferSize = vdesc.Size;
-	}
-	if (indexBuffer)
-	{
-		D3DINDEXBUFFER_DESC idesc;
-		indexBuffer->GetDesc(&idesc);
-		mIndexBufferSize = idesc.Size;
-	}
 }
 
 

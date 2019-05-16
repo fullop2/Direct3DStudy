@@ -62,10 +62,11 @@ void Scene::Draw()
 
 	for (auto txt : mText)
 		txt->Draw(mSprite);
-	for (auto psys : mParticleSystem)
-		psys->render();
+
 	mTerrain->Draw(mDevice);
 
+	for (auto psys : mParticleSystem)
+		psys->render();
 
 	mDevice->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
 	mSprite->Begin(D3DXSPRITE_ALPHABLEND);
