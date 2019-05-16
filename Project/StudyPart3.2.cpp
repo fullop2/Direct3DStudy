@@ -117,13 +117,10 @@ void Part3::useBoundingVolume(LPDIRECT3DDEVICE9 device, ObjectManager& ObjectMan
 	*/
 }
 
-void Part3::useTerrain(LPDIRECT3DDEVICE9 device, ObjectManager& objectManager)
+void Part3::useTerrain(LPDIRECT3DDEVICE9 device, ObjectManager& objectManager, CTerrain** ppTerrain)
 {
 	D3DXVECTOR3 lightDirection(0.0f, 1.0f, 0.0f);
-	CTerrain* ter = new CTerrain(device, "./Resource/castlehm257.raw", 257, 257, 1, 0.2f);
-	ter->GenTexture(&lightDirection);
-
-	ter->Move(0, 0, 0);
-	objectManager.Add(ter);
+	*ppTerrain = new CTerrain(device, "./Resource/castlehm257.raw", 257, 257, 1, 0.2f);
+	(*ppTerrain)->GenTexture(&lightDirection);
 
 }

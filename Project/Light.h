@@ -1,12 +1,7 @@
 #pragma once
-#include "Object.h"
+#include "stdafx.h"
 
-//
-// 조명도 하나의 오브젝트라고 생각함
-// 오브젝트로 가정하는 목적?
-//
-
-class Light : public Object
+class Light
 {
 public:
 	Light();
@@ -15,8 +10,9 @@ public:
 	const D3DLIGHT9* GetLight() { return &mLight; };
 
 	bool Init(D3DLIGHTTYPE type, D3DXCOLOR* color, D3DXVECTOR3* direction, D3DXVECTOR3* position);
-	int Destroy() override;
+	int Destroy();
 
 private:
+	D3DXVECTOR3 mPosition;
 	D3DLIGHT9 mLight;
 };

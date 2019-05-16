@@ -2,7 +2,6 @@
 #include "stdafx.h"
 #include "Vertex.h"
 #include "CBound.h"
-#include <list>
 
 class ParticleSystem
 {
@@ -34,7 +33,7 @@ protected:
 	float mSize;
 	IDirect3DTexture9* mTex;
 	IDirect3DVertexBuffer9* mVB;
-	std::list<Attribute> mParticles;
+	vector<Attribute> mParticles;
 	int maxParticles;
 
 	DWORD mVBSize;

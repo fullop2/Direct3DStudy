@@ -16,7 +16,7 @@ CBoundingBox::~CBoundingBox()
 bool CBoundingBox::IsPointInside(D3DXVECTOR3& point)
 {
 	if ((point.x >= mMin.x && point.y >= mMin.y &&point.z >= mMin.z) &&
-		(point.x <= mMax.x && point.y <= mMax.y &&point.z <= mMax.z))
+		point.x <= mMax.x && point.y <= mMax.y &&point.z <= mMax.z)
 	{
 		return true;
 	}

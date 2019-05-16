@@ -5,10 +5,10 @@
 static const D3DXVECTOR3 WORLD_UP = D3DXVECTOR3{ 0.0f,1.0f,0.0f };
 
 FlexCamera::FlexCamera(IDirect3DDevice9* device)
-	:Camera(device),mCameraType(AIRCRAFT),mLook(D3DXVECTOR3{ 0,-1000,0 }),mRight(D3DXVECTOR3{1.0f,0.0f,0.0f})
+	:Camera(device),mCameraType(AIRCRAFT),mLook(D3DXVECTOR3{ 0,200,0 }),mRight(D3DXVECTOR3{1.0f,0.0f,0.0f})
 {
 	mUp = D3DXVECTOR3{ 0.0f,1.0f,0.0f };
-	mPosition = D3DXVECTOR3(0, 1000, 0);
+	mPosition = D3DXVECTOR3(50, 100, 50);
 }
 
 
@@ -114,7 +114,7 @@ void FlexCamera::fly(float units)
 
 int FlexCamera::Update()
 {
-	static float speed = 1.0f * Timer::Get().GetTime() / 100;
+	static float speed = 1.0f * Timer::Get().GetTime() / 200;
 	static bool pushed = false;
 	if (!pushed && GetKeyDown(16))
 	{
@@ -145,7 +145,7 @@ int FlexCamera::Update()
 	if (GetKeyDown('F'))
 		fly(-speed);
 
-	speed *= 0.05f;
+	speed *= 0.01f;
 	if (GetKeyDown(38))
 		pitch(speed);
 
@@ -163,7 +163,7 @@ int FlexCamera::Update()
 
 	if (GetKeyDown('M'))
 		roll(-speed);
-	speed *= 20.0f;
+	speed *= 100.0f;
 	D3DXMATRIX V;
 	getViewMatrix(&V);
 	mDevice->SetTransform(D3DTS_VIEW, &V);

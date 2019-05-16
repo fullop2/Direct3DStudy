@@ -6,20 +6,22 @@
 class ObjectFactory;
 class ObjectManager;
 
-class ObjectBuffer : public Object
+class ObjectBuffer : public Object3D
 {
 	friend ObjectFactory;
 	friend ObjectManager;
 
-public:
-	virtual int Destroy();
+public:	
+	ObjectBuffer();
+	ObjectBuffer(const ObjectBuffer&);
+	virtual int Destroy() override;
 	virtual void Draw(LPDIRECT3DDEVICE9& device);
 	virtual int Update() override;
 	virtual ~ObjectBuffer();
 
 protected:
-	ObjectBuffer();
-	ObjectBuffer(const ObjectBuffer&);
+
+
 	ObjectBuffer& operator=(const ObjectBuffer&){}
 	
 

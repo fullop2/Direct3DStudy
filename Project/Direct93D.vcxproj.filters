@@ -79,9 +79,6 @@
     <Filter Include="헤더 파일\Trash">
       <UniqueIdentifier>{dafcc871-e496-4e5c-b521-affdb04f8175}</UniqueIdentifier>
     </Filter>
-    <Filter Include="헤더 파일\FrameWork\GameObjects.Framework\Interface">
-      <UniqueIdentifier>{832cd9a0-e616-4873-a811-76bb0bd68dd1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\FrameWork\Physics">
       <UniqueIdentifier>{4e75cc92-19ed-43f6-b728-73a062e602ea}</UniqueIdentifier>
     </Filter>
@@ -90,6 +87,12 @@
     </Filter>
     <Filter Include="MeshLoaderOBJ">
       <UniqueIdentifier>{94bf2694-02d5-4b0c-a002-86ea3cbaac99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FrameWork\ParticleSystems">
+      <UniqueIdentifier>{ed6e47cf-9153-443d-b504-fd2739b4a26f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FrameWork\ParticleSystems">
+      <UniqueIdentifier>{b716b946-1814-47e2-aaa8-0c66dd28fdff}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +133,6 @@
       <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClCompile>
     <ClCompile Include="ObjectStencil.cpp">
-      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectFactory.cpp">
       <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClCompile>
     <ClCompile Include="MirrorStencil.cpp">
@@ -213,11 +213,17 @@
     <ClCompile Include="StudyPart3.3.cpp">
       <Filter>소스 파일\Study</Filter>
     </ClCompile>
-    <ClCompile Include="Snow.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="ParticleSystem.cpp">
       <Filter>소스 파일\FrameWork\GameBuilder</Filter>
+    </ClCompile>
+    <ClCompile Include="Snow.cpp">
+      <Filter>소스 파일\FrameWork\ParticleSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="Firework.cpp">
+      <Filter>소스 파일\FrameWork\ParticleSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
+      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -255,9 +261,6 @@
       <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClInclude>
     <ClInclude Include="ObjectStencil.h">
-      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="ObjectFactory.h">
       <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClInclude>
     <ClInclude Include="MirrorStencil.h">
@@ -302,9 +305,6 @@
     <ClInclude Include="CBound.h">
       <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
     </ClInclude>
-    <ClInclude Include="IDrawable.h">
-      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Interface</Filter>
-    </ClInclude>
     <ClInclude Include="TemplatedObjectManager.h">
       <Filter>헤더 파일\FrameWork\Manager</Filter>
     </ClInclude>
@@ -323,9 +323,6 @@
     <ClInclude Include="Ground.h">
       <Filter>헤더 파일\GameOject</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
-    </ClInclude>
     <ClInclude Include="ColliderRect.h">
       <Filter>헤더 파일\FrameWork\Physics</Filter>
     </ClInclude>
@@ -338,20 +335,26 @@
     <ClInclude Include="FlexCamera.h">
       <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
     </ClInclude>
-    <ClInclude Include="CTerrain.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="OBJ-Loader-master\OBJ-Loader-master\Source\OBJ_Loader.h">
       <Filter>MeshLoaderOBJ</Filter>
     </ClInclude>
     <ClInclude Include="MeshLoader.h">
       <Filter>MeshLoaderOBJ</Filter>
     </ClInclude>
-    <ClInclude Include="Snow.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="ParticleSystem.h">
       <Filter>헤더 파일\FrameWork\GameBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Snow.h">
+      <Filter>헤더 파일\FrameWork\ParticleSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="Firework.h">
+      <Filter>헤더 파일\FrameWork\ParticleSystems</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrain.h">
+      <Filter>헤더 파일\FrameWork\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectFactory.h">
+      <Filter>헤더 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -361,7 +364,9 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="Resource\vs.hlsl">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Direct93D.rc">

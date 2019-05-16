@@ -1,8 +1,6 @@
 #include "Renderer.h"
-#include "Object3D.h"
-#include "Object2D.h"
 #include "CTexture.h"
-
+#include "C3DModel.h"
 
 Renderer::Renderer(HWND hWnd)
 {

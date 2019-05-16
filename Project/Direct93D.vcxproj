@@ -23,13 +23,14 @@
     <ClCompile Include="CBound.cpp" />
     <ClCompile Include="CTerrain.cpp" />
     <ClCompile Include="CTexture.cpp" />
+    <ClCompile Include="Firework.cpp" />
     <ClCompile Include="FlexCamera.cpp" />
     <ClCompile Include="Ground.cpp" />
     <ClCompile Include="MeshLoader.cpp" />
     <ClCompile Include="MirrorStencil.cpp" />
     <ClCompile Include="ObjectBuffer.cpp" />
-    <ClCompile Include="ObjectStencil.cpp" />
     <ClCompile Include="ObjectFactory.cpp" />
+    <ClCompile Include="ObjectStencil.cpp" />
     <ClCompile Include="ParticleSystem.cpp" />
     <ClCompile Include="Physics2D.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -70,19 +71,19 @@
     <ClInclude Include="ColliderRect.h" />
     <ClInclude Include="CTerrain.h" />
     <ClInclude Include="CTexture.h" />
+    <ClInclude Include="Firework.h" />
     <ClInclude Include="FlexCamera.h" />
     <ClInclude Include="Ground.h" />
-    <ClInclude Include="IDrawable.h" />
     <ClInclude Include="MeshLoader.h" />
     <ClInclude Include="MirrorStencil.h" />
     <ClInclude Include="OBJ-Loader-master\OBJ-Loader-master\Source\OBJ_Loader.h" />
     <ClInclude Include="ObjectBuffer.h" />
+    <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="ParticleSystem.h" />
     <ClInclude Include="Rigidbody2D.h" />
     <ClInclude Include="Snow.h" />
     <ClInclude Include="TemplatedObjectManager.h" />
     <ClInclude Include="ObjectStencil.h" />
-    <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="Physics2D.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="C3DModel.h" />
@@ -93,7 +94,6 @@
     <ClInclude Include="Gravity2D.h" />
     <ClInclude Include="PlayerG.h" />
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Stage1.h" />
     <ClInclude Include="StudyPart3.h" />
@@ -113,7 +113,7 @@
     <Text Include="stageMainTrash.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="Resource\vs.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Direct93D.rc" />
@@ -211,7 +211,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level2</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(DXSDK_DIR)\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

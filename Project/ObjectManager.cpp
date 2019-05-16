@@ -31,7 +31,6 @@ void ObjectManager::Destroy()
 int ObjectManager::Update()
 {
 	objects.Update();
-	baseComponents.Update();
 	UpdateObject2D();
 	//object3D.Update();
 	//objectBuffer.Update();
@@ -69,16 +68,7 @@ void ObjectManager::Draw(IDirect3DDevice9* device)
 
 	////////////////////////////////////////////////
 	// using buffer to draw 3d object
-	device->SetRenderState(D3DRS_LIGHTING, false);
-	const vector<CTerrain*>& Terrain = terrain.Get();
-	for (auto object : Terrain)
-	{
-		if (object->GetAvailable())
-		{
-			device->SetTransform(D3DTS_WORLD, &UpdateTransform(object));
-			object->Draw(device);
-		}
-	}
+
 	device->SetRenderState(D3DRS_LIGHTING, true);
 	const vector<Object3D*>& Objects = objects.Get();
 	for (auto object : Objects)

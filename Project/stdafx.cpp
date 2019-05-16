@@ -38,5 +38,5 @@ void GetRandomVector(D3DXVECTOR3* out, const D3DXVECTOR3* min, const D3DXVECTOR3
 
 DWORD FtoDw(float f)
 {
-	return (DWORD)f;
+	return *((DWORD*)& f);
 }

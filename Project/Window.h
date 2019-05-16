@@ -2,8 +2,6 @@
 
 // windows sdk 17763 version
 
-
-
 #include <Windows.h>
 
 const bool GetKeyDown(int keyCode);

@@ -15,7 +15,7 @@ C3DModel::C3DModel()
 };
 
 C3DModel::C3DModel(ID3DXBaseMesh* mesh, vector<D3DMATERIAL9>* mtrls, vector<IDirect3DTexture9*>* textures, 
-	ID3DXBuffer* adjacency, vector<pair<D3DRENDERSTATETYPE, DWORD>>* renderState)
+	ID3DXBuffer* adjacency, vector<pair<D3DRENDERSTATETYPE, DWORD> >* renderState)
 	:mMesh(mesh)
 {
 	mMesh->GetAttributeTable(nullptr, &mNumSubsets);

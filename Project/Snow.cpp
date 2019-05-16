@@ -31,8 +31,8 @@ void Snow::resetParticle(Attribute* attribute)
 		&mBoundingBox.GetMax());
 	attribute->_position.y = mBoundingBox.GetMax().y;
 
-	attribute->_velocity.x = GetRandomFloat(0.0f, 1.0f)*-3.0f;
-	attribute->_velocity.y = GetRandomFloat(0.0f, 1.0f)*-10.0f;
+	attribute->_velocity.x = GetRandomFloat(0.0f, 1.0f)*-2.0f;
+	attribute->_velocity.y = GetRandomFloat(0.0f, 1.0f)*-5.0f;
 	attribute->_velocity.z = 0;
 
 	attribute->_color = WHITE;

@@ -1,14 +1,13 @@
 #pragma once
 #include "Renderer.h"
-#include "Object2D.h"
+#include "stdafx.h"
 
 class CText
-	:public Object2D
 {
 public:
-	void Draw(ID3DXSprite* sprite) override;
-	int Update() override;
-	int Destroy() override;
+	void Draw(ID3DXSprite* sprite);
+	int Update();
+	int Destroy();
 
 	CText(LPD3DXFONT font, D3DXCOLOR color, LPCSTR text = "text");
 	~CText();
@@ -17,5 +16,6 @@ private:
 	LPD3DXFONT mFont;
 	D3DXCOLOR mColor;
 	LPCSTR mText;
+	D3DXVECTOR3 mPosition;
 };
 

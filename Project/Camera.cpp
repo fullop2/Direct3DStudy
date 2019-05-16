@@ -15,7 +15,6 @@ Camera::~Camera()
 bool Camera::Init(D3DXVECTOR3* position, D3DXVECTOR3* target)
 {
 	mPosition = *position;
-	mRotation = D3DXVECTOR3(0, 0, 0);
 	mTarget = *target;
 	mUp = D3DXVECTOR3(0, 1.0f, 0);
 	Update();

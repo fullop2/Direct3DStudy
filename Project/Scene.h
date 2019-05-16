@@ -2,21 +2,19 @@
 #include "stdafx.h"
 #include "ObjectManager.h"
 
-class Object;
-class FlexCamera;
 class Camera;
 class Renderer;
-class Timer;
 class ParticleSystem;
+class CText;
+class CTerrain;
+class Light;
 
 class Scene
 {
 public:
 	Scene(Renderer* renderer);
 
-	virtual ~Scene()
-	{
-	}
+	virtual ~Scene();
 
 	virtual bool Init() = 0;
 
@@ -26,14 +24,19 @@ public:
 	void Update(float timeDelta);
 
 protected:
-	Renderer*		mRenderer;
+	Renderer*			mRenderer;
 	D3DXMATRIX			mProjection;
 
 	IDirect3DDevice9 *	mDevice;
 	ID3DXSprite *		mSprite;
-	Camera*				mCamera;
-	Timer*				mTimer;
-	ParticleSystem* mParticleSystem;
+
 	D3DXCOLOR			mSkyColor;
+
+	Camera*				mCamera;
+	CTerrain* mTerrain;
+	vector<ParticleSystem*>		mParticleSystem;
+	vector<CText*>			mText;
+	vector<Light*>		mLight;
+
 	ObjectManager  mObjectManager;
 };

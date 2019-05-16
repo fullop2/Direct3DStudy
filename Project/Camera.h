@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include "stdafx.h"
 
 //
 // 카메라도 하나의 오브젝트로 생각함
@@ -10,7 +10,6 @@
 //
 
 class Camera 
-	: public Object
 {
 public:
 	Camera(IDirect3DDevice9* device);
@@ -34,13 +33,14 @@ public:
 	}
 
 	virtual bool Init(D3DXVECTOR3* position, D3DXVECTOR3* target);
-	virtual int Update() override;
-	int Destroy() override;
+	virtual int Update();
+	int Destroy();
 
 protected:
 	IDirect3DDevice9*	mDevice;
 	D3DXMATRIX			mViewMatrix;
 	D3DXVECTOR3			mUp;
 	D3DXVECTOR3			mTarget;
+	D3DXVECTOR3			mPosition;
 
 };

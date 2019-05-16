@@ -3,7 +3,6 @@
 #include <fstream>
 
 class CTerrain
-	:public Object
 {
 public:
 	bool ReadRawFile(string fileName);
@@ -35,6 +34,8 @@ private:
 	IDirect3DIndexBuffer9* mIndexBuffer;
 	vector<int> mHeightMap;
 	IDirect3DTexture9* mTexture;
+
+	D3DXVECTOR3 mPosition;
 
 	int mNumVertsPerRow;
 	int mNumVertsPerCol;

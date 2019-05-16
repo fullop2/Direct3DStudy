@@ -1,10 +1,14 @@
-#include "Camera.h"
 #include "Renderer.h"
 #include "Window.h"
 
 #include "Scene.h"
 #include "Physics2D.h"
+
 #include "ParticleSystem.h"
+#include "CTerrain.h"
+#include "CText.h"
+#include "Light.h"
+#include "Camera.h"
 //
 // DirectX 9에서 화면에 오브젝트를 띄우려면
 // 3D의 경우 mesh, texture, material, 좌표 등의 정보를 device에 넘겨주고
@@ -20,6 +24,18 @@ Scene::Scene(Renderer* renderer)
 	this->mRenderer = renderer;
 	mCamera = nullptr;
 	mSkyColor = D3DCOLOR_XRGB(255, 155, 255);
+}
+
+Scene::~Scene()
+{
+	SAFE_DELETE(mCamera);
+	SAFE_DELETE(mTerrain);
+	for(auto* psys : mParticleSystem)
+		SAFE_DELETE(psys);
+	for (auto* txt : mText)
+		SAFE_DELETE(txt);
+	for (auto* lgt : mLight)
+		SAFE_DELETE(lgt);
 
 }
 
@@ -28,24 +44,30 @@ void Scene::Update(float timeDelta)
 	mCamera->Update();
 	mObjectManager.Update();
 	Physics2D::Get()->Update();
-	mParticleSystem->update(timeDelta);
+
+	for(auto psys : mParticleSystem)
+		psys->update(timeDelta);
+	for (auto txt : mText)
+		txt->Update();
 }
 
 void Scene::Draw()
 {
 	mDevice->BeginScene();
 	mDevice->Clear(0, 0, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER | D3DCLEAR_STENCIL, mSkyColor, 1, 0);		// 기본 화면 지우기, Z-buffer 지우기, 스텐실 지우기
-		// 3d 오브젝트 드로잉
-	D3DXMATRIX I;
-	D3DXMatrixIdentity(&I);
-	mDevice->SetTransform(D3DTS_WORLD, &I);
-	mParticleSystem->render();
-	mDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
+
+	mDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, false);
 	//mDevice->SetRenderState(D3DRS_FILLMODE, D3DFILL_WIREFRAME);
 	mObjectManager.Draw(mDevice);
 
+	for (auto txt : mText)
+		txt->Draw(mSprite);
+	for (auto psys : mParticleSystem)
+		psys->render();
+	mTerrain->Draw(mDevice);
+
+
 	mDevice->SetRenderState(D3DRS_CULLMODE, D3DCULL_NONE);
-	
 	mSprite->Begin(D3DXSPRITE_ALPHABLEND);
 
 	mObjectManager.Draw2D(mSprite);
@@ -58,6 +80,4 @@ void Scene::Draw()
 
 void Scene::Destroy()
 {
-	delete mCamera;
-	delete mParticleSystem;
 }

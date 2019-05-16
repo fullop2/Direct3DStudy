@@ -4,6 +4,7 @@
 #include "Light.h"
 #include "ObjectManager.h"
 #include "ObjectFactory.h"
+#include "Firework.h"
 #include "Snow.h"
 #include "CBound.h"
 
@@ -16,12 +17,11 @@
 Stage_Main::Stage_Main(Renderer* renderer)
 	:Scene(renderer)
 {
-	mSkyColor = D3DCOLOR_XRGB(0,0,0);
+	mSkyColor = D3DCOLOR_XRGB(30,30,100);
 }
 
 Stage_Main::~Stage_Main()
 {
-
 }
 
 bool Stage_Main::Init()
@@ -35,8 +35,10 @@ bool Stage_Main::Init()
 	mDevice->SetSamplerState(0, D3DSAMP_MIPFILTER, D3DTEXF_POINT);
 
 	CBoundingBox c = CBoundingBox(D3DXVECTOR3(-100, -100, -100), D3DXVECTOR3(100, 100, 100));
-	mParticleSystem = new Snow(&c, 50);
-	mParticleSystem->init(mDevice, "./media/w3.png");
+	D3DXVECTOR3 o = D3DXVECTOR3(0, 200, 0);
+	ParticleSystem* ps =  new Firework(&o,5000);
+	ps->init(mDevice, "./media/w3.png");
+	mParticleSystem.push_back(ps);
 
 	Light* light = new Light;
 	D3DXVECTOR3 di = D3DXVECTOR3{ 1.0f,-1.0f,0.0f };
@@ -45,7 +47,7 @@ bool Stage_Main::Init()
 	light->Init(D3DLIGHT_DIRECTIONAL, &color, &di, 0);
 	mDevice->SetLight(0, light->GetLight());
 	mDevice->LightEnable(0, true);
-	mObjectManager.Add(light);
+	mLight.push_back(light);
 	
 	// set render state
 	mDevice->SetRenderState(D3DRS_NORMALIZENORMALS, true);
@@ -53,10 +55,9 @@ bool Stage_Main::Init()
 	mDevice->SetRenderState(D3DRS_LIGHTING,	true);
 	
 	mCamera = new FlexCamera{mDevice};
-	mObjectManager.Add(mCamera);
 
 	ObjectFactory *objectFactory = new ObjectFactory(mDevice);
-	//Part3::useTerrain(mDevice, mObjectManager);
+	Part3::useTerrain(mDevice, mObjectManager,&mTerrain);
 	//Part3::useID3DXBaseMesh(mDevice, mObjectManager, objectFactory);
 	
 	delete objectFactory;

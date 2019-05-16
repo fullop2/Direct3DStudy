@@ -33,9 +33,8 @@ public:
 		mObjects2D.resize(layerSize);
 	}
 
-	void Add(CTerrain* pObject) { terrain.Add(pObject); }
+
 	void Add(Object3D* pObject) { objects.Add(pObject); }
-	void Add(Object* pObject){ baseComponents.Add(pObject); }
 	void Destroy();
 	int Update();
 	int UpdateObject2D();
@@ -43,9 +42,7 @@ public:
 	void Draw2D(ID3DXSprite* sprite);
 
 
-	TemplatedObjectManager<CTerrain> terrain;
 	TemplatedObjectManager<Object3D> objects;
-	TemplatedObjectManager<Object> baseComponents;
 	
 private:
 	// ³ª¿­ÀÚ µÐ°©¼úÀ» À§ÇÑ enum

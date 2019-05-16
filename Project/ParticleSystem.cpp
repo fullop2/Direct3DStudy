@@ -10,8 +10,8 @@ ParticleSystem::ParticleSystem()
 
 ParticleSystem::~ParticleSystem()
 {
-	 SAFE_DELETE(mTex);
-	 SAFE_DELETE(mVB);
+	SAFE_RELEASE(mTex);
+	SAFE_RELEASE(mVB);
 }
 
 bool ParticleSystem::init(LPDIRECT3DDEVICE9 device, char* texFileName)
@@ -49,16 +49,15 @@ void ParticleSystem::addParticle()
 
 void ParticleSystem::preRender()
 {
-	mDevice->SetRenderState(D3DRS_ZWRITEENABLE, false);
 	mDevice->SetRenderState(D3DRS_LIGHTING, false);
 	mDevice->SetRenderState(D3DRS_POINTSPRITEENABLE, true);
 	mDevice->SetRenderState(D3DRS_POINTSCALEENABLE, true);
-	mDevice->SetRenderState(D3DRS_POINTSIZE,(DWORD) mSize);
-	mDevice->SetRenderState(D3DRS_POINTSIZE_MIN, (DWORD)0);
-
-	mDevice->SetRenderState(D3DRS_POINTSCALE_A, (DWORD)0);
-	mDevice->SetRenderState(D3DRS_POINTSCALE_B, (DWORD)0);
-	mDevice->SetRenderState(D3DRS_POINTSCALE_C, (DWORD)1);
+	mDevice->SetRenderState(D3DRS_POINTSIZE, FtoDw(mSize));
+	mDevice->SetRenderState(D3DRS_POINTSIZE_MIN, FtoDw(10));
+	//mDevice->SetRenderState(D3DRS_POINTSIZE_MAX, FtoDw(100));
+	mDevice->SetRenderState(D3DRS_POINTSCALE_A, FtoDw(0));
+	mDevice->SetRenderState(D3DRS_POINTSCALE_B, FtoDw(0));
+	mDevice->SetRenderState(D3DRS_POINTSCALE_C, FtoDw(1));
 
 	mDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);
 	mDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
@@ -173,8 +172,7 @@ bool ParticleSystem::isEmpty()
 
 bool ParticleSystem::isDead()
 {
-	std::list<Attribute>::iterator i;
-	for (i = mParticles.begin(); i != mParticles.end(); i++)
+	for (auto i = mParticles.begin(); i != mParticles.end(); i++)
 	{
 		if (i->_isAlive)
 			return false;

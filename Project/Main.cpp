@@ -13,7 +13,7 @@ int WINAPI WinMain(
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 #endif
 	// 누수 포인트를 체크하여 중단점으로 반환
-	// _crtBreakAlloc = 180;
+	//_crtBreakAlloc = 172;
 	Window window;
 	Renderer renderer(window.GetWindowHandler());
 	Stage_Main* stage = new Stage_Main(&renderer);
