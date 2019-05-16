@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include "Object3D.h"
 #include "Window.h"
 #include "Vertex.h"
 

@@ -36,7 +36,7 @@ bool Stage_Main::Init()
 
 	CBoundingBox c = CBoundingBox(D3DXVECTOR3(-100, -100, -100), D3DXVECTOR3(100, 100, 100));
 	D3DXVECTOR3 o = D3DXVECTOR3(0, 200, 0);
-	ParticleSystem* ps =  new Firework(&o,5000);
+	ParticleSystem* ps =  new Snow(&c,5000);
 	ps->init(mDevice, "./media/w3.png");
 	mParticleSystem.push_back(ps);
 
