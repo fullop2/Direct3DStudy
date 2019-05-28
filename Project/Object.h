@@ -31,7 +31,7 @@ public:
 	void SetScale		(D3DXVECTOR3 scale);
 	void SetTag			(string& tag) { mTag = tag; };
 
-	virtual int Update() { return true; };
+	virtual int Update(float deltaTime) { return true; };
 	virtual int Destroy() { return true; };
 
 protected:

@@ -23,7 +23,7 @@ public:
 	virtual bool Init(CTexture* pTexture = nullptr);
 	virtual void Draw(ID3DXSprite* sprite);
 	virtual int Destroy() override;
-	virtual int Update() override { return true; };
+	virtual int Update(float deltaTime) override { return true; };
 	const D3DXCOLOR& GetColor() { return mColor; };
 	void SetColor(const D3DXCOLOR& color) { mColor = color; };
 

@@ -8,5 +8,5 @@ private:
 public:
 	Player();
 	~Player();
-	int Update() override;
+	int Update(float deltaTime) override;
 };

@@ -36,8 +36,8 @@ public:
 
 	void Add(Object3D* pObject) { objects.Add(pObject); }
 	void Destroy();
-	int Update();
-	int UpdateObject2D();
+	int Update(float deltaTime);
+	int UpdateObject2D(float deltaTime);
 	void Draw(IDirect3DDevice9* device);
 	void Draw2D(ID3DXSprite* sprite);
 

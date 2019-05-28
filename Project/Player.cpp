@@ -13,7 +13,7 @@ Player::~Player()
 {
 }
 
-int Player::Update()
+int Player::Update(float deltaTime)
 {
 	if (GetKeyDown('W'))
 		mPosition.y -= 3;

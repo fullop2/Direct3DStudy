@@ -126,9 +126,6 @@
     <ClCompile Include="Object2D.cpp">
       <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClCompile>
-    <ClCompile Include="Object3D.cpp">
-      <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
-    </ClCompile>
     <ClCompile Include="ObjectBuffer.cpp">
       <Filter>소스 파일\FrameWork\GameObjects.Framework\Object</Filter>
     </ClCompile>
@@ -332,9 +329,6 @@
     <ClInclude Include="FlexCamera.h">
       <Filter>헤더 파일\FrameWork\GameObjects.Framework\FundmentalObject</Filter>
     </ClInclude>
-    <ClInclude Include="OBJ-Loader-master\OBJ-Loader-master\Source\OBJ_Loader.h">
-      <Filter>MeshLoaderOBJ</Filter>
-    </ClInclude>
     <ClInclude Include="MeshLoader.h">
       <Filter>MeshLoaderOBJ</Filter>
     </ClInclude>
@@ -349,6 +343,9 @@
     </ClInclude>
     <ClInclude Include="CTerrain.h">
       <Filter>헤더 파일\FrameWork\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshLoaderOBJ\Source\OBJ_Loader.h">
+      <Filter>MeshLoaderOBJ</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

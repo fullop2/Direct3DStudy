@@ -23,11 +23,11 @@ public:
 		mObjectList.push_back(object);
 	}
 
-	int Update() 
+	int Update(float deltaTime) 
 	{
 		for (auto object = mObjectList.begin(); object != mObjectList.end();)
 		{
-			if ((*object)->GetAvailable() && !(*object)->Update())
+			if ((*object)->GetAvailable() && !(*object)->Update(deltaTime))
 			{
 				T* destroyObject = *object;
 				object = mObjectList.erase(object);

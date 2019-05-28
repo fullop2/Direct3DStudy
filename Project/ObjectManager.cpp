@@ -28,10 +28,10 @@ void ObjectManager::Destroy()
 
 }
 
-int ObjectManager::Update()
+int ObjectManager::Update(float deltaTime)
 {
-	objects.Update();
-	UpdateObject2D();
+	objects.Update(deltaTime);
+	UpdateObject2D(deltaTime);
 	//object3D.Update();
 	//objectBuffer.Update();
 	//text.Update();
@@ -40,14 +40,14 @@ int ObjectManager::Update()
 	return true;
 }
 
-int ObjectManager::UpdateObject2D()
+int ObjectManager::UpdateObject2D(float deltaTime)
 {
 	size_t layerSize = mObjects2D.size();
 	for (size_t layer = 0; layer < layerSize; ++layer)
 	{
 		for (auto object = mObjects2D[layer].begin(); object != mObjects2D[layer].end();)
 		{
-			if ((*object)->GetAvailable() && !(*object)->Update())
+			if ((*object)->GetAvailable() && !(*object)->Update(deltaTime))
 			{
 				Object2D* destroyObject = *object;
 				destroyObject->Destroy();

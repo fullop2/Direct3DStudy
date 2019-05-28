@@ -4,7 +4,6 @@
 #include "Renderer.h"
 #include "C3DModel.h"
 
-
 C3DModel::C3DModel()
 {
 	mMesh = nullptr;
@@ -49,17 +48,9 @@ C3DModel::C3DModel(ID3DXBaseMesh* mesh, vector<D3DMATERIAL9>* mtrls, vector<IDir
 
 C3DModel::C3DModel(LPCSTR name)
 {
-	/*
-	std::ifstream inFile;
-	inFile.open(name);
-	std::string line;
-	std::stringstream lins;
-	inFile >> line;
-	lins.str(line);
-	string tmp;
-	lins >> tmp;
-	lins >> tmp;
-	*/
+	bool success = loader.LoadFile("Resource/test.obj");
+	
+	vector < objl::Mesh > meshes = loader.LoadedMeshes();
 }
 
 void C3DModel::Draw(IDirect3DDevice9* device)

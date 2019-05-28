@@ -21,7 +21,7 @@ public:
 	void Draw();
 	//void DrawStencil();
 	void Destroy();
-	void Update(float timeDelta);
+	void Update(float deltaTime);
 
 protected:
 	Renderer*			mRenderer;

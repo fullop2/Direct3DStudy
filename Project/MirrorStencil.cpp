@@ -15,7 +15,7 @@ MirrorStencil::~MirrorStencil()
 {
 }
 
-void MirrorStencil::Draw(LPDIRECT3DDEVICE9& device) 
+void MirrorStencil::Draw(IDirect3DDevice9* device)
 {/*
  
 	//

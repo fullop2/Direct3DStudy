@@ -39,14 +39,14 @@ Scene::~Scene()
 
 }
 
-void Scene::Update(float timeDelta)
+void Scene::Update(float deltaTime)
 {
 	mCamera->Update();
-	mObjectManager.Update();
+	mObjectManager.Update(deltaTime);
 	Physics2D::Get()->Update();
 
 	for(auto psys : mParticleSystem)
-		psys->update(timeDelta);
+		psys->update(deltaTime);
 	for (auto txt : mText)
 		txt->Update();
 }

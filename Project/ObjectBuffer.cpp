@@ -40,33 +40,6 @@ ObjectBuffer::ObjectBuffer(LPD3DXMESH mesh, D3DMATERIAL9* mtrl, LPDIRECT3DTEXTUR
 	FVF = 0;
 	mVertexSize = 0;
 }
-ObjectBuffer::~ObjectBuffer()
-{
-}
-
-int ObjectBuffer::Update()
-{
-	/*
-	if (mRotation.y > 360.0f)
-	{
-	mRotation.y = 0;
-	}
-	else
-	{
-	mRotation.y += 1.0f;
-	}
-	
-	if (mMesh)
-	{
-		float& dif = mMaterial->Diffuse.a;
-		if (GetKeyDown('A') && dif > 0.0f)
-			dif -= 0.01f;
-		if (GetKeyDown('S') && dif < 1.0f)
-			dif += 0.01f;
-	}*/
-	return true;
-}
-
 
 int ObjectBuffer::Destroy()
 {
@@ -77,7 +50,7 @@ int ObjectBuffer::Destroy()
 	return true;
 }
 
-void ObjectBuffer::Draw(LPDIRECT3DDEVICE9& device)
+void ObjectBuffer::Draw(IDirect3DDevice9* device)
 {
 	if (mMesh)
 	{

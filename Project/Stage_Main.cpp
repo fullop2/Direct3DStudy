@@ -3,16 +3,16 @@
 #include "FlexCamera.h"
 #include "Light.h"
 #include "ObjectManager.h"
-
 #include "Firework.h"
 #include "Snow.h"
 #include "CBound.h"
-
 #include "Player.h"
 
 // D3D9 서적 예제 함수들 구현한 것
 #include "StudyPart2.h"
 #include "StudyPart3.h"
+
+
 
 Stage_Main::Stage_Main(Renderer* renderer)
 	:Scene(renderer)
@@ -58,6 +58,11 @@ bool Stage_Main::Init()
 
 	Part3::useTerrain(mDevice, mObjectManager,&mTerrain);
 	//Part3::useID3DXBaseMesh(mDevice, mObjectManager, objectFactory);
-	
+
+	C3DModel* model = new C3DModel();
+
+
+
+
 	return true;
 }

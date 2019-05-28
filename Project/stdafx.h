@@ -7,9 +7,9 @@
 #include <unordered_map>
 #include <vector>
 
-#define map std::unordered_map
-#define vector std::vector
-#define pair std::pair
+using std::unordered_map;//#define map std::unordered_map
+using std::vector;//#define vector std::vector
+using std::pair; //#define pair std::pair
 typedef std::string string;
 
 #define MtrlVec vector<D3DMATERIAL9>

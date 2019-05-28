@@ -3,6 +3,26 @@
 #include "MeshLoader.h"
 #include "Vertex.h"
 
+// Loaded Mesh Objects
+vector<objl::Mesh> LoadedMeshes()
+{
+
+}
+// Loaded Vertex Objects
+vector<objl::Vertex> LoadedVertices()
+{
+
+}
+// Loaded Index Positions
+vector<unsigned int> LoadedIndices()
+{
+
+}
+// Loaded Material Objects
+vector<objl::Material> LoadedMaterials()
+{
+
+}
 
 MeshLoader::MeshLoader(LPDIRECT3DDEVICE9 device)
 	:mDevice(device)
@@ -15,8 +35,20 @@ MeshLoader::~MeshLoader()
 }
 
 
+void MeshLoader::get3DObject(string fileName, ID3DXBaseMesh** ppMesh, MtrlVec** mtrlVec, TexVec** texVec)
+{
+	if (!loader.LoadFile(fileName))
+	{
+		*ppMesh = nullptr;
+		*mtrlVec = nullptr;
+		*texVec = nullptr;
+		return;
+	}
+	loader.
+}
+
 // use MeshLoader10 Direct X example
-HRESULT MeshLoader::Create(LPCSTR dir, C3DModel* model)
+//HRESULT MeshLoader::Create(LPCSTR dir, C3DModel* model)/*
 {/*
 	WCHAR strMaterialFilename[MAX_PATH] = { 0 };
 	WCHAR wstr[MAX_PATH];
@@ -172,4 +204,4 @@ HRESULT MeshLoader::Create(LPCSTR dir, C3DModel* model)
 	*/
 
 	return S_OK;
-}
+}*/
